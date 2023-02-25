@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import { qwikVite } from '@builder.io/qwik/optimizer';
 
 export default defineConfig({
-    mode: "lib",
     build: {
         target: 'es2020',
         lib: {

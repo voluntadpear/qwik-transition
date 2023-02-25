@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build && tsc --declaration --emitDeclarationOnly --outDir dist",
+    "dev.ssr": "vite --mode ssr",
+    "build": "tsc --noEmit && vite build --mode lib && tsc --declaration --emitDeclarationOnly --outDir dist",
     "preview": "vite preview"
   },
   "devDependencies": {
