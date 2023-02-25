@@ -1,6 +1,24 @@
-* {
-    font-family: sans-serif;
+/* Classes relevant to transitions first */
+
+.btn-entered {
+    transform: translateY(0);
 }
+
+.btn-animating {
+    transform: translateY(50%);
+}
+
+.dialog-entered {
+    filter: blur(0px);
+    transform: scale(1);
+}
+
+.dialog-animating {
+    filter: blur(20px);
+    transform: scale(0.6);
+}
+
+/* Rest of the CSS rules */
 
 .btn {
     background-color: #0b5ed7;
@@ -12,17 +30,6 @@
     cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #2070f0;
-}
-
-.btn-entered {
-    transform: translateY(0);
-}
-
-.btn-animating {
-    transform: translateY(50%);
-}
 
 .dialog {
     position: absolute;
@@ -44,14 +51,12 @@
     font-size: 2rem;
 }
 
-.dialog-entered {
-    filter: blur(0px);
-    transform: scale(1);
+* {
+    font-family: sans-serif;
 }
 
-.dialog-animating {
-    filter: blur(20px);
-    transform: scale(0.6);
+.btn:hover {
+    background-color: #2070f0;
 }
 
 .dialog button {
