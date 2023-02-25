@@ -20,5 +20,6 @@
       "import": "./dist/index.qwik.mjs"
     }
   },
-  "types": "./dist/index.d.ts"
+  "types": "./dist/index.d.ts",
+  "license": "MIT"
 }
