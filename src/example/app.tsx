@@ -1,18 +1,41 @@
-import { component$, useSignal, useStyles$ } from "@builder.io/qwik";
+import {
+  component$,
+  useBrowserVisibleTask$,
+  useSignal,
+  useStyles$,
+  useTask$,
+} from "@builder.io/qwik";
 import { useCSSTransition } from "../usecsstransition";
 import styles from "./styles.css?inline";
 
 export default component$(() => {
   useStyles$(styles);
-  const onOff = useSignal(false);
+  const alertOnOff = useSignal(false);
   const buttonOnOff = useSignal(true);
+  const alertBtnRef = useSignal<HTMLButtonElement>();
 
-  const alertTrans = useCSSTransition(onOff, { timeout: 300 });
+  const alertTrans = useCSSTransition(alertOnOff, { timeout: 300 });
   const buttonTrans = useCSSTransition(buttonOnOff, {
     timeout: 300,
   });
   const paragraphTrans = useCSSTransition(useSignal(true), {
     transitionOnAppear: true,
+  });
+
+  useTask$(({ track }) => {
+    track(() => alertOnOff.value);
+
+    // treat buttonOnOff as computed value of alertOnOff
+    buttonOnOff.value = !alertOnOff.value;
+  });
+
+  useBrowserVisibleTask$(({ track }) => {
+    track(() => alertBtnRef.value);
+
+    // force focus to alert button when it's visible
+    if (alertTrans.shouldMount.value && alertBtnRef.value) {
+      alertBtnRef.value.focus();
+    }
   });
 
   return (
@@ -38,8 +61,7 @@ export default component$(() => {
               : null
           }`}
           onClick$={() => {
-            onOff.value = true;
-            buttonOnOff.value = false;
+            alertOnOff.value = true;
           }}
         >
           Show message
@@ -57,11 +79,12 @@ export default component$(() => {
           <p>Alert</p>
           <form method="dialog">
             <button
+              //@ts-expect-error
               preventDefault:click
-                onClick$={() => {
-                onOff.value = false;
-                buttonOnOff.value = true;
+              onClick$={() => {
+                alertOnOff.value = false;
               }}
+              ref={alertBtnRef}
             >
               Close
             </button>

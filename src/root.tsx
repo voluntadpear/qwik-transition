@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import App from './example/app'
+import App from "./example/app";
 
 export const Root = component$(() => {
   return (
