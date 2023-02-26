@@ -20,7 +20,7 @@ Light-weight (<1kb gzip) custom hook for qwik to help with CSS transitions. Base
 
 <p align="center" style="font-size: 16px;">
 <a href="https://tqgdj.csb.app/">
-    <img src="./markdown-assets/qwik-transition-demo.gif" width="300" alt="example">
+    <img src="https://github.com/voluntadpear/qwik-transition/raw/main/markdown-assets/qwik-transition-demo.gif" width="500" alt="example">
   </a>
   <br>
   <a href="https://stackblitz.com/edit/qwik-starter-jbwvdb?file=src/routes/index.tsx" target="_blank">See example in Stackblitz</a> |
