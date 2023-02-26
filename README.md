@@ -19,7 +19,7 @@ Light-weight (<1kb gzip) custom hook for qwik to help with CSS transitions. Base
 </div>
 
 <p align="center">
-  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx">See Example</a>
+  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx" target="_blank">See Example</a>
 </p>
 
 ## Installation
