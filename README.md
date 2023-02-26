@@ -8,7 +8,7 @@
 <h1 align='center'>qwik-transition</h1>
 
 <div align='center'>
-Light-weight (<1kb) custom hook for qwik to help with CSS transitions. Based on <a href="https://github.com/iamyoki/transition-hook">@iamyoki/transition-hook</a>.
+Light-weight (<1kb gzip) custom hook for qwik to help with CSS transitions. Based on <a href="https://github.com/iamyoki/transition-hook">@iamyoki/transition-hook</a>.
 <br><br>
   <a href='https://img.shields.io/npm/v/qwik-transition?label=npm%20version'>
   <img src='https://img.shields.io/npm/v/qwik-transition?label=npm%20version' alt='qwik-transition npm'>
