@@ -4,7 +4,7 @@ import type { Signal } from "@builder.io/qwik";
 export type Stage = "enterFrom" | "enterTo" | "leaveFrom" | "leaveTo" | "idle";
 
 export function useCSSTransition(
-  state: Signal<boolean>,
+  signal: Signal<boolean>,
   { timeout = 0, transitionOnAppear = false }
 ) {
   // the stage of transition - 'from' | 'enter' | 'leave'
@@ -13,15 +13,15 @@ export function useCSSTransition(
 
   // the timer for should mount
   const timer = useSignal<Canceller>({});
-  const shouldMount = useSignal(state.value);
+  const shouldMount = useSignal(signal.value);
 
   useBrowserVisibleTask$(function handleStateChange({ track }) {
-    track(() => state.value);
+    track(() => signal.value);
     clearAnimationFrameTimeout(timer.value);
 
     // when true - trans from to enter
     // when false - trans enter to leave, unmount after timeout
-    if (state.value) {
+    if (signal.value) {
       if (appeared.value) {
         stage.value = "enterFrom";
       }

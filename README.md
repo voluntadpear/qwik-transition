@@ -1,6 +1,6 @@
 <p align="center">
   <br>
-  <img width="400" src="./markdown-assets/logo-color.svg" alt="qwik-transition">
+  <img width="400" src="https://github.com/voluntadpear/qwik-transition/blob/main/markdown-assets/logo-color.svg" alt="qwik-transition">
   <br>
   <br>
 </p>
@@ -16,10 +16,11 @@ Light-weight (<1kb) custom hook for qwik to help with CSS transitions. Based on 
   <a href='https://opensource.org/licenses/MIT'>
   <img src='https://img.shields.io/badge/License-MIT-green.svg' alt='MIT'>
   </a>
-  <a href='#contributors'>
-  <img src='https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square' alt='All Contributors'>
-  </a>
 </div>
+
+<p align="center">
+  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx">See Example</a>
+</p>
 
 ## Installation
 
@@ -75,15 +76,17 @@ export default component$(() => {
 
 | Parameters | Type      | Description                                                           |
 | :--------- | :-------- | :-------------------------------------------------------------------- |
-| `state`    | `boolean` | **Required**. Your boolean state, which controls animation in and out |
-| `options`  | `{timeout: number = 0; transitionOnAppear: boolean = false;}`  | **timeout:** How long before the transition ends and the component unmounts. **transitionOnAppear** Whether to set the `enterFrom` stage value on the initial mount of the page or not.         |
+| `signal`    | `Signal<boolean>` | **Required**. Your boolean signal, which controls animation in and out |
+| `options`  | `{ timeout: number = 0; transitionOnAppear: boolean = false; }`  | **timeout:** How long before the transition ends and the component unmounts. <br />**transitionOnAppear** Whether to set the `enterFrom` stage value on the initial mount of the page or not.         |
 
 <br>
 
 | Returns       | Type                                | Description                                         |
 | :------------ | :---------------------------------- | :-------------------------------------------------- |
-| `stage`       | Stage: "enterFrom" | "enterTo" | "leaveFrom" | "leaveTo" | "idle" | Use five different stage to perform your transition |
-| `shouldMount` | `boolean`                           | Whether the component should be mounted or not             |
+| `stage`       | `Signal<"enterFrom" \| "enterTo" \| "leaveFrom" \| "leaveTo" \| "idle">` | **`idle`**: No transition. <br /> **enterFrom:** The element will appear. The transition begins. Use this value to set the starting values of your enter transition. <br /> **`enterTo`:** Added in the next tick after ``enterFrom``. Use this value to set the ending values of your enter transition. <br /> **`leaveFrom`:** The element will disappear. The transition beings. Use this value to set the starting values of your exit transition. <br /> **`leaveTo`:** Added in the next tick after `leaveFrom`. Use this value to set the ending values of your exit transition.|
+| `shouldMount` | `Signal<boolean>`                           | Whether the component should be mounted or not. The `timeout` you specify as one of the options is important here to time when `shouldMount` changes from `true` to `false`.             |
+
+
 
 ## Acknowledgment
 
