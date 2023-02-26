@@ -1,8 +1,26 @@
 {
   "name": "qwik-transition",
+  "description": "Light-weight easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components.",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
+  "keywords": [
+    "qwik",
+    "css",
+    "transitions",
+    "qwik-transition",
+    "animations",
+    "css animations"
+  ],
+  "author": "Guillermo Peralta Scura",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voluntadpear/qwik-transition"
+  },
+  "bugs": {
+    "url": "https://github.com/voluntadpear/qwik-transition/issues"
+  },
+  "homepage": "https://github.com/voluntadpear/qwik-transition#readme",
   "scripts": {
     "dev": "vite",
     "dev.ssr": "vite --mode ssr",
