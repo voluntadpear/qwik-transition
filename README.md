@@ -8,7 +8,7 @@
 <h1 align='center'>qwik-transition</h1>
 
 <div align='center'>
-Light-weight (**<1kb gzip**) easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components. Based on <a href="https://github.com/iamyoki/transition-hook">@iamyoki/transition-hook</a>.
+Light-weight (<strong><1kb gzip</strong>) easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components. Based on <a href="https://github.com/iamyoki/transition-hook">@iamyoki/transition-hook</a>.
 <br><br>
   <a href='https://img.shields.io/npm/v/qwik-transition?label=npm%20version'>
   <img src='https://img.shields.io/npm/v/qwik-transition?label=npm%20version' alt='qwik-transition npm'>
