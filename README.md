@@ -71,22 +71,23 @@ export default component$(() => {
 ### useCSSTransition(signal, { timeout, transitionOnAppear })
 
 ```js
-  const { stage, shouldMount } = useCSSTransition(onOff, { timeout: 300, transitionOnAppear: true });
+const { stage, shouldMount } = useCSSTransition(onOff, {
+  timeout: 300,
+  transitionOnAppear: true,
+});
 ```
 
-| Parameters | Type      | Description                                                           |
-| :--------- | :-------- | :-------------------------------------------------------------------- |
-| `signal`    | `Signal<boolean>` | **Required**. Your boolean signal, which controls animation in and out |
-| `options`  | `{ timeout: number = 0; transitionOnAppear: boolean = false; }`  | **timeout:** How long before the transition ends and the component unmounts. <br />**transitionOnAppear** Whether to set the `enterFrom` stage value on the initial mount of the page or not.         |
+| Parameters | Type                                                            | Description                                                                                                                                                                                   |
+| :--------- | :-------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `signal`   | `Signal<boolean>`                                               | **Required**. Your boolean signal, which controls animation in and out                                                                                                                        |
+| `options`  | `{ timeout: number = 0; transitionOnAppear: boolean = false; }` | **timeout:** How long before the transition ends and the component unmounts. <br />**transitionOnAppear** Whether to set the `enterFrom` stage value on the initial mount of the page or not. |
 
 <br>
 
-| Returns       | Type                                | Description                                         |
-| :------------ | :---------------------------------- | :-------------------------------------------------- |
-| `stage`       | `Signal<"enterFrom" \| "enterTo" \| "leaveFrom" \| "leaveTo" \| "idle">` | **`idle`**: No transition. <br /> **enterFrom:** The element will appear. The transition begins. Use this value to set the starting values of your enter transition. <br /> **`enterTo`:** Added in the next tick after ``enterFrom``. Use this value to set the ending values of your enter transition. <br /> **`leaveFrom`:** The element will disappear. The transition beings. Use this value to set the starting values of your exit transition. <br /> **`leaveTo`:** Added in the next tick after `leaveFrom`. Use this value to set the ending values of your exit transition.|
-| `shouldMount` | `Signal<boolean>`                           | Whether the component should be mounted or not. The `timeout` you specify as one of the options is important here to time when `shouldMount` changes from `true` to `false`.             |
-
-
+| Returns       | Type                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :------------ | :----------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `stage`       | `Signal<"enterFrom" \| "enterTo" \| "leaveFrom" \| "leaveTo" \| "idle">` | **`idle`**: No transition. <br /> **enterFrom:** The element will appear. The transition begins. Use this value to set the starting values of your enter transition. <br /> **`enterTo`:** Added in the next tick after `enterFrom`. Use this value to set the ending values of your enter transition. <br /> **`leaveFrom`:** The element will disappear. The transition beings. Use this value to set the starting values of your exit transition. <br /> **`leaveTo`:** Added in the next tick after `leaveFrom`. Use this value to set the ending values of your exit transition. |
+| `shouldMount` | `Signal<boolean>`                                                        | Whether the component should be mounted or not. The `timeout` you specify as one of the options is important here to time when `shouldMount` changes from `true` to `false`.                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Acknowledgment
 
@@ -95,7 +96,3 @@ Thanks to https://github.com/iamyoki/transition-hook that this hook is an adapta
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
-
-
