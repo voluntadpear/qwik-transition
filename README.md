@@ -18,8 +18,13 @@ Light-weight (<1kb gzip) custom hook for qwik to help with CSS transitions. Base
   </a>
 </div>
 
-<p align="center">
-  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx" target="_blank">See Example</a>
+<p align="center" style="font-size: 16px;">
+<a href="https://tqgdj.csb.app/">
+    <img src="./markdown-assets/qwik-transition-demo.gif" width="300" alt="example">
+  </a>
+  <br>
+  <a href="https://stackblitz.com/edit/qwik-starter-jbwvdb?file=src/routes/index.tsx" target="_blank">See example in Stackblitz</a> |
+  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx" target="_blank">See example component</a>
 </p>
 
 ## Installation
