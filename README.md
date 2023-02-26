@@ -19,7 +19,7 @@ Light-weight (<strong><1kb gzip</strong>) easy-to-use custom Qwik hook for addin
 </div>
 
 <p align="center" style="font-size: 16px;">
-<a href="https://tqgdj.csb.app/">
+<a href="https://stackblitz.com/edit/qwik-starter-jbwvdb?file=src/routes/index.tsx">
     <img src="https://github.com/voluntadpear/qwik-transition/raw/main/markdown-assets/qwik-transition-demo.gif" width="500" alt="example">
   </a>
   <br>
