@@ -85,8 +85,8 @@ const { stage, shouldMount } = useCSSTransition(onOff, {
 **Parameters:**
 * `signal: Signal<boolean>`:  **Required**. Your boolean signal, which controls animation in and out.
 * `options: { timeout: number = 0; transitionOnAppear: boolean = false; }`:
-  *  `**timeout**`: How long before the transition ends and the component unmounts.
-  * `**transitionOnAppear**`: Whether to set the `enterFrom` stage value on the initial mount of the page or not.
+  *  `timeout`: How long before the transition ends and the component unmounts.
+  * `transitionOnAppear`: Whether to set the `enterFrom` stage value on the initial mount of the page or not.
 
 **Returns:**
 * `stage: Signal<"enterFrom" \| "enterTo" \| "leaveFrom" \| "leaveTo" \| "idle">`: Current stage of the transition.
