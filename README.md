@@ -89,7 +89,7 @@ const { stage, shouldMount } = useCSSTransition(onOff, {
   * `transitionOnAppear`: Whether to set the `enterFrom` stage value on the initial mount of the page or not.
 
 **Returns:**
-* `stage: Signal<"enterFrom" \| "enterTo" \| "leaveFrom" \| "leaveTo" \| "idle">`: Current stage of the transition.
+* `stage: Signal<"enterFrom" | "enterTo" | "leaveFrom" | "leaveTo" | "idle">`: Current stage of the transition.
   * **`idle`**: No transition.
   * **`enterFrom`**: The element will enter. The transition begins. Use this value to set the starting values of your enter transition.
   * **`enterTo`**: Added in the next tick after `enterFrom`. Use this value to set the ending values of your enter transition.
