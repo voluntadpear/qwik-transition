@@ -8,7 +8,7 @@
 <h1 align='center'>qwik-transition</h1>
 
 <div align='center'>
-Light-weight (<strong><1kb gzip</strong>) easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components. Based on <a href="https://github.com/iamyoki/transition-hook">@iamyoki/transition-hook</a>.
+Lightweight (<strong><1kb gzip</strong>) and easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components. This hook is based on <a href="https://github.com/iamyoki/transition-hook">@iamyoki/transition-hook</a>.
 <br><br>
   <a href='https://img.shields.io/npm/v/qwik-transition?label=npm%20version'>
   <img src='https://img.shields.io/npm/v/qwik-transition?label=npm%20version' alt='qwik-transition npm'>
@@ -23,8 +23,8 @@ Light-weight (<strong><1kb gzip</strong>) easy-to-use custom Qwik hook for addin
     <img src="https://github.com/voluntadpear/qwik-transition/raw/main/markdown-assets/qwik-transition-demo.gif" width="500" alt="example">
   </a>
   <br>
-  <a href="https://stackblitz.com/edit/qwik-starter-jbwvdb?file=src/routes/index.tsx" target="_blank">See example in Stackblitz</a> |
-  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx" target="_blank">See example component</a>
+  <a href="https://stackblitz.com/edit/qwik-starter-jbwvdb?file=src/routes/index.tsx" target="_blank">View demo in StackBlitz</a> |
+  <a href="https://github.com/voluntadpear/qwik-transition/blob/main/src/example/app.tsx" target="_blank">View example source code</a>
 </p>
 
 ## Installation
@@ -37,7 +37,7 @@ npm install qwik-transition
 
 ### useCSSTransition
 
-This hook transforms a boolean state into a transition stage, that allows you to control your CSS transitions.
+This hook transforms a boolean state into a transition stage, which allows you to control your CSS transitions.
 
 ```jsx
 import { component$, useSignal } from "@builder.io/qwik";
@@ -91,15 +91,15 @@ const { stage, shouldMount } = useCSSTransition(onOff, {
 **Returns:**
 * `stage: Signal<"enterFrom" \| "enterTo" \| "leaveFrom" \| "leaveTo" \| "idle">`: Current stage of the transition.
   * **`idle`**: No transition.
-  * **`enterFrom`**: The element will appear. The transition begins. Use this value to set the starting values of your enter transition.
+  * **`enterFrom`**: The element will enter. The transition begins. Use this value to set the starting values of your enter transition.
   * **`enterTo`**: Added in the next tick after `enterFrom`. Use this value to set the ending values of your enter transition.
   * **`leaveFrom`**: The element will disappear. The transition beings. Use this value to set the starting values of your exit transition.
   * **`leaveTo`**: Added in the next tick after `leaveFrom`. Use this value to set the ending values of your exit transition.
 * `shouldMount: Signal<boolean>`: Whether the component should be mounted or not. The `timeout` you specify as one of the options is important here to time when `shouldMount` changes from `true` to `false`.
 
-## Acknowledgment
+## Acknowledgments
 
-Thanks to https://github.com/iamyoki/transition-hook that this hook is an adaptation from.
+This hook is adapted from https://github.com/iamyoki/transition-hook. Many thanks to the original author!
 
 ## License
 
