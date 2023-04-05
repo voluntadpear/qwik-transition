@@ -1,4 +1,4 @@
-import { useBrowserVisibleTask$, useSignal } from "@builder.io/qwik";
+import { useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { Signal } from "@builder.io/qwik";
 
 export type Stage = "enterFrom" | "enterTo" | "leaveFrom" | "leaveTo" | "idle";
@@ -15,7 +15,7 @@ export function useCSSTransition(
   const timer = useSignal<Canceller>({});
   const shouldMount = useSignal(signal.value);
 
-  useBrowserVisibleTask$(function handleStateChange({ track }) {
+  useVisibleTask$(function handleStateChange({ track }) {
     track(() => signal.value);
     clearAnimationFrameTimeout(timer.value);
 

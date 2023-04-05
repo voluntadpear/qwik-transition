@@ -30,7 +30,7 @@
   "devDependencies": {
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
-    "@builder.io/qwik": "^0.19.2"
+    "@builder.io/qwik": "^0.100.0"
   },
   "module": "./dist/index.qwik.mjs",
   "qwik": "./dist/index.qwik.mjs",

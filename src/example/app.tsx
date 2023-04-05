@@ -1,6 +1,6 @@
 import {
   component$,
-  useBrowserVisibleTask$,
+  useVisibleTask$,
   useSignal,
   useStyles$,
   useTask$,
@@ -30,7 +30,7 @@ export default component$(() => {
     buttonOnOff.value = !alertOnOff.value;
   });
 
-  useBrowserVisibleTask$(({ track }) => {
+  useVisibleTask$(({ track }) => {
     track(() => alertBtnRef.value);
     track(() => alertTrans.shouldMount.value);
 
