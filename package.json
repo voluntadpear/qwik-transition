@@ -2,7 +2,7 @@
   "name": "qwik-transition",
   "description": "Light-weight easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components.",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "keywords": [
     "qwik",
