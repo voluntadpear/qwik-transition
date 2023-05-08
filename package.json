@@ -2,7 +2,7 @@
   "name": "qwik-transition",
   "description": "Light-weight easy-to-use custom Qwik hook for adding smooth animations and effects to your Qwik components.",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "keywords": [
     "qwik",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
-    "@builder.io/qwik": "^0.100.0"
+    "@builder.io/qwik": "^1.0.0"
   },
   "module": "./dist/index.qwik.mjs",
   "qwik": "./dist/index.qwik.mjs",
